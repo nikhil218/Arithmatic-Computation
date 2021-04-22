@@ -32,3 +32,9 @@ do
 done
 
 echo ${Result_Values[@]}
+
+echo "Computation Result in the Ascending Order is : "
+for k in ${!Computation[@]}
+do
+	echo $k ":" ${Computation[$k]}
+done | sort -n -k3
