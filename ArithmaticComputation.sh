@@ -25,3 +25,10 @@ for k in ${!Computation[@]}
 do
 	echo $k " : " ${Computation[$k]}
 done
+counter=1
+for i in ${!Computation[@]}
+do
+	Result_Values[counter++]=${Computation[$i]}
+done
+
+echo ${Result_Values[@]}
