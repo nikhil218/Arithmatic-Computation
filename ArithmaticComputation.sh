@@ -13,3 +13,15 @@ echo $Query1
 echo $Query2
 echo $Query3
 echo $Query4
+
+declare -A Computation
+Computation[a+b*c]=$Query1
+Computation[a*b+c]=$Query2
+Computation[c+a/b]=$Query3
+Computation[a%b+c]=$Query4
+
+echo "Results of all the computation are : " 
+for k in ${!Computation[@]}
+do
+	echo $k " : " ${Computation[$k]}
+done
